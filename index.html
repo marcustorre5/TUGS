@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css
+">
+    <link rel="stylesheet" href="style.css">
+    <title>TUGS</title>
+</head>
+<body>
+    
+    <h1 class="container-fluid p-0 container-sm d-flex justify-content-center">TUGS</h1>
+    
+    <div class="container-fluid p-0 container-sm d-flex justify-content-center">
+        <div class="card" style="max-width: 60rem;">
+            <div class="card-header">TUGS</div>
+            <div class="card-body">
+              <h5 class="card-title">Tomadas</h5>
+              <p class="card-text">Cálculo para dimensionamento de potencias para tomadas de uso residenciais.</p>
+            
+                <div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="bt()">
+                              <strong>Cozinha</strong>
+                            </button>
+                          </h2>
+                          <div id="dow" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Potência (VA) de tomadas.</strong>
+                              <br>
+                              <div class="input-group mb-3">
+                                <input id='box' type="text" class="form-control" placeholder=" Digite a quantidade de tomadas:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <button class="input-group-text" onclick="ok()">OK</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p id="resultado"></p>
+                          <p id="newbt"></p>
+                        </div>
+                </div>
+                <br>
+                <div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="bt_2()">
+                              <strong>Dormitório</strong>
+                            </button>
+                          </h2>
+                          <div id="dow_2" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Potência (VA) de tomadas.</strong>
+                              <br>
+                              <div class="input-group mb-3">
+                                <input id='box_2' type="text" class="form-control" placeholder=" Digite a quantidade de tomadas:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <button class="input-group-text" onclick="ok_2()">OK</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p id="resultado_2"></p>
+                          <p id="newbt_2"></p>
+                        </div>
+                </div>
+
+                <br>
+                <div>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="bt_3()">
+                              <strong>Suítes</strong>
+                            </button>
+                          </h2>
+                          <div id="dow_3" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Potência (VA) de tomadas.</strong>
+                              <br>
+                              <div class="input-group mb-3">
+                                <input id='box_3' type="text" class="form-control" placeholder=" Digite a quantidade de tomadas:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <button class="input-group-text" onclick="ok_3()">OK</button>
+                              </div>
+                            </div>
+                          </div>
+                          <p id="resultado_3"></p>
+                          <p id="newbt_3"></p>
+                        </div>
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="bt_4()">
+                          <strong>Sala de Estar</strong>
+                        </button>
+                      </h2>
+                      <div id="dow_4" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Potência (VA) de tomadas.</strong>
+                          <br>
+                          <div class="input-group mb-3">
+                            <input id='box_4' type="text" class="form-control" placeholder=" Digite a quantidade de tomadas:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <button class="input-group-text" onclick="ok_4()">OK</button>
+                          </div>
+                        </div>
+                      </div>
+                      <p id="resultado_4"></p>
+                      <p id="newbt_4"></p>
+                    </div>
+            </div>
+            
+            <br>
+            <div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="bt_5()">
+                          <strong>Área de Serviço</strong>
+                        </button>
+                      </h2>
+                      <div id="dow_5" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>Potência (VA) de tomadas.</strong>
+                          <br>
+                          <div class="input-group mb-3">
+                            <input id='box_5' type="text" class="form-control" placeholder=" Digite a quantidade de tomadas:" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <button class="input-group-text" onclick="ok_5()">OK</button>
+                          </div>
+                        </div>
+                      </div>
+                      <p id="resultado_5"></p>
+                      <p id="newbt_5"></p>
+                    </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="tab.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
